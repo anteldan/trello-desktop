@@ -49,7 +49,7 @@ function createMainWindow() {
   }
 
   win.loadURL('https://trello.com/');
-
+    
   win.on('close', e => {
     if (isQuitting) {
       if (!mainWindow.isFullScreen()) {
@@ -139,7 +139,7 @@ app.on('ready', () => {
     ]
   }
   ];
-
+    
   electron.Menu.setApplicationMenu(electron.Menu.buildFromTemplate(template));
 });
 
@@ -148,7 +148,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('activate', () => {
-  mainWindow.show();
+    mainWindow.show();
 });
 
 app.on('before-quit', () => {
